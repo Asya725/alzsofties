@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Add this line right here! */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* Default Light Mode Styles */
+  body {
+    @apply bg-[#FFF5F7] text-gray-900 transition-colors duration-300;
+  }
+
+  /* Dark Mode Styles */
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
